@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация</title>
+  <link rel="stylesheet" type="text/css" href="css/registration.css">
+</head>
+<body>
+  <div class="registration-form-container">
+    <div class="header">
+        <a class="header-title" href="index.html">ЗАКРЫТЬ</a>
+    </div>
+    <div class="registration-form">
+      <form class="form" id="registrationForm">
+        <div class="left">
+
+            <label for="firstName"></label>
+            <input type="text" placeholder="Имя*" id="firstName" required>
+
+            <label for="lastName"></label>
+            <input type="text" placeholder="Фамилия" id="lastName">
+
+            <label for="patronymic"></label>
+            <input type="text" placeholder="Отчество (при наличии)" id="patronymic">
+
+            <label for="country"></label>
+            <select id="country"  required>
+
+              <option value="" disabled selected>Выберите страну проживания*</option>
+              <option value="country1">Россия</option>
+              <option value="country2">Казахстан</option>
+              <option value="country3">Чехословакия</option>
+              <option value="country4">Армения</option>
+              <option value="country5">Германия</option>
+
+            </select>
+
+            <label for="phoneNumber"></label>
+            <input type="tel" placeholder="Номер телефона*" id="phoneNumber" required>
+
+            <label for="email"></label>
+            <input type="email" placeholder="E-mail" id="email">
+
+        </div>
+        
+        <div class="right">
+
+            <label for="cardHolderName"></label>
+            <input type="text" placeholder="Имя владельца карты" id="cardHolderName">
+            <label for="cardNumber"></label>
+            <input type="text" placeholder="Номер карты" id="cardNumber">
+            
+            <div class="mmyycvv">
+                <div class="mmyy">
+                    <input class="mmyy" type="text" placeholder="MM / YY" id="expirationDate">
+                </div>
+
+                <div class="cvv">
+                    <input type="text" placeholder="CVV" id="CVV">
+                </div>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="agreement" required>
+                <p class="p-checkbox">Я согласен с условиями пользовательского соглашения</p>
+            </div>
+            <div class="captcha">
+                <img src="./public/captcha.jpg" alt="captcha">
+            </div>
+            <div class="button">
+            <button class="reg" type="submit">Зарегистрироваться</button>
+            </div>
+        </div>
+      </form>
+    </div>
+  </div>
+<script src="./js/registration.js"></script>
+</body>
+</html>
